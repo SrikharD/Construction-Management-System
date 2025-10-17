@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Dogiparthy_Spring25.Data;
 using Dogiparthy_Spring25.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,7 @@ namespace Dogiparthy_Spring25.Controllers
             _userManager = userManager;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             // Check if user is a SiteWorker
@@ -103,11 +105,13 @@ namespace Dogiparthy_Spring25.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public IActionResult Privacy()
         {
             return View();
         }
 
+        [AllowAnonymous]
         public IActionResult Help()
         {
             return View();
