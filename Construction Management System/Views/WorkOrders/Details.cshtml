@@ -1,0 +1,154 @@
+﻿@model Dogiparthy_Spring25.Models.WorkOrder
+
+@{
+    ViewData["Title"] = "Work Order Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 style="margin: 0; font-size: 2.5rem;">
+                    <i class="bi bi-clipboard-check"></i> @Model.TaskName
+                </h1>
+                <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Work Order Details</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                @{
+                    var statusColor = Model.Status.ToString() == "Completed" ? "success" :
+                                     Model.Status.ToString() == "InProgress" ? "info" :
+                                     Model.Status.ToString() == "NotStarted" ? "warning" : "secondary";
+                }
+                <span class="badge bg-@statusColor" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                    <i class="bi bi-circle-fill"></i> @Model.Status
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <!-- Task Information Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-list-task"></i> Task Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Task Name:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.TaskName)
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Status:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @{
+                                var statusColorInner = Model.Status.ToString() == "Completed" ? "success" :
+                                                      Model.Status.ToString() == "InProgress" ? "info" :
+                                                      Model.Status.ToString() == "NotStarted" ? "warning" : "secondary";
+                            }
+                            <span class="badge bg-@statusColorInner" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">
+                                @Html.DisplayFor(model => model.Status)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Estimated End Date:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.EstimatedEndDate, "{0:MM/dd/yyyy}")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Site Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-building"></i> Project Site
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Site Title:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @if (Model.ProjectSite != null)
+                            {
+                                <a href="@Url.Action("Details", "ProjectSites", new { id = Model.ProjectSite.SiteID })" class="text-decoration-none">
+                                    @Model.ProjectSite.SiteTitle
+                                </a>
+                            }
+                            else
+                            {
+                                <span style="color: #999;">Not Assigned</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Location:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @if (Model.ProjectSite != null)
+                            {
+                                <i class="bi bi-geo-alt"></i> @Model.ProjectSite.Location
+                            }
+                            else
+                            {
+                                <span style="color: #999;">N/A</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Description Card -->
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-file-text"></i> Description
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p style="white-space: pre-wrap; word-wrap: break-word;">
+                        @Html.DisplayFor(model => model.Description)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="row">
+        <div class="col-md-12">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a asp-action="Edit" asp-route-id="@Model?.WorkOrderID" class="btn btn-primary">
+                    <i class="bi bi-pencil"></i> Edit Order
+                </a>
+                <a asp-action="Index" class="btn btn-outline-dark">
+                    <i class="bi bi-arrow-left"></i> Return to Orders
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,174 @@
+<!-- Created By: Srikhar Dogiparthy-->
+@{
+    ViewData["Title"] = "Help & Support";
+}
+
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 0; margin-bottom: 2rem; border-radius: 12px;">
+    <div class="container">
+        <h1 style="margin: 0; font-size: 2.5rem;">
+            <i class="bi bi-question-circle"></i> Help & Support
+        </h1>
+        <p style="margin: 0.5rem 0 0 0; font-size: 1.1rem; opacity: 0.9;">
+            Find answers to common questions and get support
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- FAQ Section -->
+    <div style="margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 2rem; color: #333;">
+            <i class="bi bi-chat-dots"></i> Frequently Asked Questions
+        </h2>
+
+        <div class="accordion" id="faqAccordion">
+            <!-- FAQ Item 1 -->
+            <div class="accordion-item" style="border: 1px solid #ddd; margin-bottom: 1rem; border-radius: 8px;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        <i class="bi bi-question-circle" style="margin-right: 0.5rem;"></i> How do I log in to the system?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>To log in, use your email address and password provided by the system administrator. If you don't have an account, please contact the admin team to request access.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="accordion-item" style="border: 1px solid #ddd; margin-bottom: 1rem; border-radius: 8px;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        <i class="bi bi-question-circle" style="margin-right: 0.5rem;"></i> How do I create a new project site?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Navigate to "Project Sites" from the main menu, click "Create New", and fill in the required information including site name, location, and property owner details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="accordion-item" style="border: 1px solid #ddd; margin-bottom: 1rem; border-radius: 8px;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        <i class="bi bi-question-circle" style="margin-right: 0.5rem;"></i> How do I assign workers to a work order?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Go to the Work Orders section, select a work order, and click "Manage Site Workers". You can then add available workers to the work order.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="accordion-item" style="border: 1px solid #ddd; margin-bottom: 1rem; border-radius: 8px;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        <i class="bi bi-question-circle" style="margin-right: 0.5rem;"></i> What does "Worker Status" mean?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Available:</strong> Worker is free and can be assigned to new work orders.<br/>
+                        <strong>Busy:</strong> Worker is currently assigned to one or more work orders.<br/>
+                        When a work order is marked as "Completed", all assigned workers automatically become "Available".</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="accordion-item" style="border: 1px solid #ddd; margin-bottom: 1rem; border-radius: 8px;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        <i class="bi bi-question-circle" style="margin-right: 0.5rem;"></i> How do I track work order progress?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>You can view work order status in the Work Orders section. Each work order shows its current status (Not Started, In Progress, On Hold, or Completed) and assigned workers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="accordion-item" style="border: 1px solid #ddd; margin-bottom: 1rem; border-radius: 8px;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        <i class="bi bi-question-circle" style="margin-right: 0.5rem;"></i> How do I view my activity history?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        <p>Click on "View History" in the sidebar menu to see your recent activity including projects, work orders, and workers you've accessed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Support Section -->
+    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem; color: #333;">
+            <i class="bi bi-envelope"></i> Contact Support
+        </h2>
+        <p style="color: #666; margin-bottom: 1rem;">
+            If you need additional assistance, please contact the system administrator:
+        </p>
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #667eea;">
+            <p style="margin: 0.5rem 0;">
+                <strong><i class="bi bi-person"></i> Administrator:</strong> System Admin Team
+            </p>
+            <p style="margin: 0.5rem 0;">
+                <strong><i class="bi bi-envelope"></i> Email:</strong> admin@constructionms.com
+            </p>
+            <p style="margin: 0.5rem 0;">
+                <strong><i class="bi bi-telephone"></i> Phone:</strong> (555) 123-4567
+            </p>
+            <p style="margin: 0.5rem 0;">
+                <strong><i class="bi bi-clock"></i> Support Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM
+            </p>
+        </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div style="background: #e8f4f8; padding: 2rem; border-radius: 12px; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem; color: #333;">
+            <i class="bi bi-link-45deg"></i> Quick Links
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+            <a asp-controller="Home" asp-action="Privacy" class="btn btn-outline-primary" style="text-align: left; padding: 1rem;">
+                <i class="bi bi-shield-lock"></i> Privacy Policy
+            </a>
+            <a href="https://www.example.com/documentation" target="_blank" class="btn btn-outline-primary" style="text-align: left; padding: 1rem;">
+                <i class="bi bi-book"></i> Documentation
+            </a>
+            <a href="https://www.example.com/tutorials" target="_blank" class="btn btn-outline-primary" style="text-align: left; padding: 1rem;">
+                <i class="bi bi-play-circle"></i> Video Tutorials
+            </a>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary" style="text-align: left; padding: 1rem;">
+                <i class="bi bi-house"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+
+    <!-- Tips Section -->
+    <div style="background: #fff3cd; padding: 2rem; border-radius: 12px; border-left: 4px solid #ffc107; margin-bottom: 3rem;">
+        <h2 style="margin-bottom: 1.5rem; color: #333;">
+            <i class="bi bi-lightbulb"></i> Helpful Tips
+        </h2>
+        <ul style="color: #666; line-height: 1.8;">
+            <li>Use the search functionality to quickly find projects, workers, or work orders</li>
+            <li>Check the "View History" section to track your recent activities</li>
+            <li>Worker availability is automatically updated when work orders are completed</li>
+            <li>Use filters to organize and view specific work orders by status</li>
+            <li>Keep your profile information up to date for better system functionality</li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+

@@ -1,0 +1,56 @@
+﻿@model List<ProjectSite>
+
+@if (Model.Count > 0)
+{
+    <div class="table-responsive">
+        <table class="table table-hover" style="border-collapse: collapse;">
+            <thead style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white;">
+                <tr>
+                    <th style="padding: 1rem; border: none;">
+                        <i class="bi bi-house-fill"></i> Site Title
+                    </th>
+                    <th style="padding: 1rem; border: none;">
+                        <i class="bi bi-rulers"></i> Size (Sq Ft)
+                    </th>
+                    <th style="padding: 1rem; border: none;">
+                        <i class="bi bi-geo-alt"></i> Location
+                    </th>
+                    <th style="padding: 1rem; border: none;">
+                        <i class="bi bi-tag"></i> Site Type
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var site in Model)
+                {
+                    <tr style="border-bottom: 1px solid #e0e0e0; transition: background-color 0.2s;">
+                        <td style="padding: 1rem; border: none;">
+                            <strong>@site.SiteTitle</strong>
+                        </td>
+                        <td style="padding: 1rem; border: none;">
+                            <span class="badge bg-info">@site.SizeSqFt sq ft</span>
+                        </td>
+                        <td style="padding: 1rem; border: none;">
+                            <i class="bi bi-geo-alt"></i> @site.Location
+                        </td>
+                        <td style="padding: 1rem; border: none;">
+                            @{
+                                var typeColor = site.SiteType.ToString() == "Residential" ? "primary" :
+                                               site.SiteType.ToString() == "Commercial" ? "success" :
+                                               site.SiteType.ToString() == "Industrial" ? "warning" : "danger";
+                            }
+                            <span class="badge bg-@typeColor">@site.SiteType</span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div style="text-align: center; padding: 2rem; background-color: #f8f9fa; border-radius: 8px; border: 1px dashed #ccc;">
+        <i class="bi bi-inbox" style="font-size: 2rem; color: #999;"></i>
+        <p style="color: #999; margin-top: 1rem;">No Properties associated with this owner at this time.</p>
+    </div>
+}

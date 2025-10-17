@@ -1,0 +1,36 @@
+﻿@model WorkAllocation
+
+@{
+    ViewData["Title"] = "Delete Work Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Do you want to delete the assigned Work Order "@Model.WorkOrder?.TaskName" for this SiteWorker?</h3>
+
+
+
+<dl class="row">
+    <dt class="col-sm-2">Worker Order: </dt>
+    <dd class="col-sm-10">@Model.WorkOrder.TaskName</dd>
+
+    <dt class="col-sm-2">Description:</dt>
+    <dd class="col-sm-10">@Model.WorkOrder.Description</dd>
+
+    <dt class="col-sm-2">Estimated End Date:</dt>
+    <dd class="col-sm-10">@Model.WorkOrder.EstimatedEndDate</dd>
+    
+    <dt class="col-sm-2">Assigned Date:</dt>
+    <dd class="col-sm-10">@Model.AssignedDate</dd>
+
+</dl>
+
+
+<div>
+    <form asp-action="DeleteWorkOrder">
+        <input type="hidden" asp-for="WorkID" />
+        <input type="submit" value="Delete Work Order" class="btn btn-danger" />
+    </form>
+</div>
+
+<br />
+<a asp-action="ManageWorkOrders" asp-route-id="@Model.SiteWorkerPersonID" class="btn btn-outline-dark">Back to Manage Work Orders</a>

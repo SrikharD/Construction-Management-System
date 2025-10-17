@@ -1,0 +1,410 @@
+﻿<!-- Created By: Srikhar Dogiparthy-->
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>
+            <i class="bi bi-speedometer2"></i> Dashboard
+        </h1>
+        <p>Welcome to the Construction Management System</p>
+    </div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-person-circle"></i> Welcome Back!</h5>
+                    <p>You are logged in as <strong>@User.Identity.Name</strong></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p style="margin: 0;">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <span class="badge bg-danger" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                <i class="bi bi-shield-check"></i> Administrator
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-info" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                <i class="bi bi-person-check"></i> Standard User
+                            </span>
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        @if (ViewBag.IsSiteWorker == true)
+        {
+            <!-- Site Worker Dashboard -->
+            <div style="margin-top: 2rem;">
+                <h2>
+                    <i class="bi bi-briefcase"></i> Your Work Orders & Project Sites
+                </h2>
+
+                <!-- Statistics Cards -->
+                <div class="row" style="margin-bottom: 2rem;">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.DashboardData.TotalWorkOrders</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Total Work Orders</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.DashboardData.InProgressWorkOrders</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">In Progress</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.DashboardData.CompletedWorkOrders</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Completed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.DashboardData.TotalProjectSites</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Project Sites</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Orders Section -->
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="bi bi-clipboard-check"></i> Your Assigned Work Orders
+                    </h4>
+                    @if (ViewBag.DashboardData.AssignedWorkOrders.Count > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead style="background: #f8f9fa;">
+                                    <tr>
+                                        <th>Work Order ID</th>
+                                        <th>Project Site</th>
+                                        <th>Status</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var workOrder in ViewBag.DashboardData.AssignedWorkOrders)
+                                    {
+                                        <tr>
+                                            <td><strong>WO-@workOrder.WorkOrderID</strong></td>
+                                            <td>@workOrder.ProjectSite?.SiteTitle</td>
+                                            <td>
+                                                @if (workOrder.Status == Dogiparthy_Spring25.Models.TaskStatus.Completed)
+                                                {
+                                                    <span class="badge bg-success">Completed</span>
+                                                }
+                                                else if (workOrder.Status == Dogiparthy_Spring25.Models.TaskStatus.InProgress)
+                                                {
+                                                    <span class="badge bg-warning">In Progress</span>
+                                                }
+                                                else if (workOrder.Status == Dogiparthy_Spring25.Models.TaskStatus.NotStarted)
+                                                {
+                                                    <span class="badge bg-secondary">Not Started</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-info">On Hold</span>
+                                                }
+                                            </td>
+                                            <td>@workOrder.Description</td>
+                                            <td>
+                                                <a asp-controller="WorkOrders" asp-action="Details" asp-route-id="@workOrder.WorkOrderID" class="btn btn-sm btn-primary">
+                                                    <i class="bi bi-eye"></i> View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="text-align: center; padding: 2rem; color: #999;">
+                            <i class="bi bi-inbox" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                            <p>No work orders assigned yet</p>
+                        </div>
+                    }
+                </div>
+
+                <!-- Project Sites Section -->
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="bi bi-house-fill"></i> Your Project Sites
+                    </h4>
+                    @if (ViewBag.DashboardData.AssignedProjectSites.Count > 0)
+                    {
+                        <div class="row">
+                            @foreach (var site in ViewBag.DashboardData.AssignedProjectSites)
+                            {
+                                <div class="col-md-6 mb-3">
+                                    <div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 1.5rem; border-radius: 12px; border-left: 4px solid #667eea;">
+                                        <h5 style="margin-bottom: 0.5rem;">@site.SiteTitle</h5>
+                                        <p style="margin: 0.5rem 0; color: #666; font-size: 0.9rem;">
+                                            <i class="bi bi-geo-alt"></i> @site.Location
+                                        </p>
+                                        <p style="margin: 0.5rem 0; color: #666; font-size: 0.9rem;">
+                                            <i class="bi bi-person-vcard"></i> Owner: @site.CurrentOwner?.FirstName @site.CurrentOwner?.LastName
+                                        </p>
+                                        <a asp-controller="ProjectSites" asp-action="Details" asp-route-id="@site.SiteID" class="btn btn-sm btn-primary mt-2">
+                                            <i class="bi bi-arrow-right"></i> View Details
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="text-align: center; padding: 2rem; color: #999;">
+                            <i class="bi bi-house" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                            <p>No project sites assigned yet</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+        else if (ViewBag.IsCurrentOwner == true)
+        {
+            <!-- Current Owner Dashboard -->
+            <div style="margin-top: 2rem;">
+                <h2>
+                    <i class="bi bi-building"></i> Your Properties & Work Orders
+                </h2>
+
+                <!-- Statistics Cards -->
+                <div class="row" style="margin-bottom: 2rem;">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.OwnerDashboardData.TotalProjectSites</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Total Properties</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.OwnerDashboardData.TotalWorkOrders</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Total Work Orders</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.OwnerDashboardData.NotStartedWorkOrders</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Not Started</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div style="background: #1a1a1a; color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);">
+                            <div style="font-size: 2rem; font-weight: 700;">@ViewBag.OwnerDashboardData.OnHoldWorkOrders</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">On Hold</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Orders Status Overview -->
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="bi bi-pie-chart"></i> Work Orders Status Overview
+                    </h4>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ffc107; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #ffc107;">@ViewBag.OwnerDashboardData.NotStartedWorkOrders</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Not Started</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #ff9800; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #ff9800;">@ViewBag.OwnerDashboardData.InProgressWorkOrders</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">In Progress</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #28a745; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #28a745;">@ViewBag.OwnerDashboardData.CompletedWorkOrders</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">Completed</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-3">
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #17a2b8; text-align: center;">
+                                <div style="font-size: 1.8rem; font-weight: 700; color: #17a2b8;">@ViewBag.OwnerDashboardData.OnHoldWorkOrders</div>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">On Hold</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Properties Section -->
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="bi bi-house-fill"></i> Your Properties
+                    </h4>
+                    @if (ViewBag.OwnerDashboardData.OwnedProjectSites.Count > 0)
+                    {
+                        <div class="row">
+                            @foreach (var site in ViewBag.OwnerDashboardData.OwnedProjectSites)
+                            {
+                                <div class="col-md-6 mb-3">
+                                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                                        <h5 style="margin-bottom: 0.5rem; color: white;">@site.SiteTitle</h5>
+                                        <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
+                                            <i class="bi bi-geo-alt"></i> @site.Location
+                                        </p>
+                                        <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
+                                            <i class="bi bi-rulers"></i> @site.SizeSqFt sq ft
+                                        </p>
+                                        <p style="margin: 0.5rem 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
+                                            <i class="bi bi-tag"></i> <span class="badge bg-light text-dark">@site.SiteType</span>
+                                        </p>
+                                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                                            <small style="color: rgba(255,255,255,0.8);">Work Orders: <strong>@(site.WorkOrders?.Count ?? 0)</strong></small>
+                                        </div>
+                                        <a asp-controller="ProjectSites" asp-action="Details" asp-route-id="@site.SiteID" class="btn btn-sm btn-light mt-2" style="color: #667eea;">
+                                            <i class="bi bi-arrow-right"></i> View Details
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="text-align: center; padding: 2rem; color: #999;">
+                            <i class="bi bi-house" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                            <p>No properties assigned yet</p>
+                        </div>
+                    }
+                </div>
+
+                <!-- Work Orders Section -->
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="bi bi-clipboard-check"></i> All Work Orders
+                    </h4>
+                    @if (ViewBag.OwnerDashboardData.AllWorkOrders.Count > 0)
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead style="background: #f8f9fa;">
+                                    <tr>
+                                        <th>Work Order ID</th>
+                                        <th>Project Site</th>
+                                        <th>Status</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var workOrder in ViewBag.OwnerDashboardData.AllWorkOrders)
+                                    {
+                                        <tr>
+                                            <td><strong>WO-@workOrder.WorkOrderID</strong></td>
+                                            <td>@workOrder.ProjectSite?.SiteTitle</td>
+                                            <td>
+                                                @if (workOrder.Status == Dogiparthy_Spring25.Models.TaskStatus.Completed)
+                                                {
+                                                    <span class="badge bg-success">Completed</span>
+                                                }
+                                                else if (workOrder.Status == Dogiparthy_Spring25.Models.TaskStatus.InProgress)
+                                                {
+                                                    <span class="badge bg-warning">In Progress</span>
+                                                }
+                                                else if (workOrder.Status == Dogiparthy_Spring25.Models.TaskStatus.NotStarted)
+                                                {
+                                                    <span class="badge bg-secondary">Not Started</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-info">On Hold</span>
+                                                }
+                                            </td>
+                                            <td>@workOrder.Description</td>
+                                            <td>
+                                                <a asp-controller="WorkOrders" asp-action="Details" asp-route-id="@workOrder.WorkOrderID" class="btn btn-sm btn-primary">
+                                                    <i class="bi bi-eye"></i> View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="text-align: center; padding: 2rem; color: #999;">
+                            <i class="bi bi-inbox" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                            <p>No work orders yet</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+        else
+        {
+            <!-- Regular Quick Access for Admin -->
+            <h2 style="margin-top: 2rem;">Quick Access</h2>
+            <div class="controller-links">
+                <a asp-controller="ProjectSites" asp-action="Index" title="Manage project sites and properties">
+                    <i class="bi bi-house-fill"></i>
+                    <span>Project Sites</span>
+                </a>
+                <a asp-controller="WorkOrders" asp-action="Index" title="View and manage work orders">
+                    <i class="bi bi-clipboard-check"></i>
+                    <span>Work Orders</span>
+                </a>
+                <a asp-controller="SiteWorkers" asp-action="Index" title="Manage site workers">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Site Workers</span>
+                </a>
+                <a asp-controller="CurrentOwners" asp-action="Index" title="Manage property owners">
+                    <i class="bi bi-person-vcard"></i>
+                    <span>Property Owners</span>
+                </a>
+            </div>
+        }
+
+        <div style="background: #f0f8ff; border-left: 4px solid #0066cc; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+            <h5 style="color: #0066cc; margin-bottom: 0.5rem;">
+                <i class="bi bi-info-circle"></i> System Information
+            </h5>
+            <p style="margin: 0; color: #333;">
+                This system helps you manage construction projects, assign workers to tasks, and track project progress efficiently.
+            </p>
+        </div>
+    }
+    else
+    {
+        <div style="text-align: center; padding: 3rem 0;">
+            <div style="background: var(--primary-light); padding: 3rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); max-width: 500px; margin: 0 auto;">
+                <i class="bi bi-lock" style="font-size: 3rem; color: #0066cc; margin-bottom: 1rem; display: block;"></i>
+                <h3>Welcome to CMS</h3>
+                <p style="color: #666; margin-bottom: 2rem;">
+                    Please log in to access the Construction Management System
+                </p>
+                <div class="btn-group-action" style="justify-content: center;">
+                    <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Login
+                    </a>
+                </div>
+                <div style="background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 1rem; margin-top: 1rem;">
+                    <i class="bi bi-info-circle" style="color: #ff9800;"></i>
+                    <p style="margin: 0.5rem 0 0 0; color: #333; font-size: 0.9rem;">
+                        <strong>To create a new account,</strong> please contact the system administrator. New users are registered by the admin team.
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,278 @@
+@model Dictionary<string, object>
+
+@{
+    ViewData["Title"] = "History & Tracking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 style="margin: 0; font-size: 2.5rem;">
+                    <i class="bi bi-clock-history"></i> History & Tracking
+                </h1>
+                <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">View your recently accessed items and session history</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <a asp-action="ClearHistory" class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Clear All History
+                </a>
+            </div>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Work Orders History -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-clipboard-check"></i> Recently Viewed Work Orders
+                    </h5>
+                    <a asp-action="ClearWorkOrderHistory" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-trash"></i> Clear
+                    </a>
+                </div>
+                <div class="card-body">
+                    @{
+                        var workOrders = Model["WorkOrders"] as List<WorkOrder>;
+                        if (workOrders != null && workOrders.Count > 0)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="bi bi-list-task"></i> Task Name</th>
+                                            <th><i class="bi bi-hourglass-split"></i> Status</th>
+                                            <th><i class="bi bi-calendar-event"></i> End Date</th>
+                                            <th style="text-align: center;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in workOrders)
+                                        {
+                                            <tr>
+                                                <td><strong>@item.TaskName</strong></td>
+                                                <td>
+                                                    @{
+                                                        var statusBadgeClass = item.Status.ToString() switch
+                                                        {
+                                                            "NotStarted" => "bg-warning",
+                                                            "InProgress" => "bg-info",
+                                                            "Completed" => "bg-success",
+                                                            "OnHold" => "bg-secondary",
+                                                            _ => "bg-secondary"
+                                                        };
+                                                    }
+                                                    <span class="badge @statusBadgeClass">@item.Status</span>
+                                                </td>
+                                                <td>@item.EstimatedEndDate.ToString("MM/dd/yyyy")</td>
+                                                <td style="text-align: center;">
+                                                    <a asp-controller="WorkOrders" asp-action="Details" asp-route-id="@item.WorkOrderID" class="btn btn-sm btn-primary">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <p style="color: #999; text-align: center; padding: 2rem;">
+                                <i class="bi bi-inbox" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                                No work order history available
+                            </p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Sites History -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-house-fill"></i> Recently Viewed Project Sites
+                    </h5>
+                    <a asp-action="ClearProjectSiteHistory" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-trash"></i> Clear
+                    </a>
+                </div>
+                <div class="card-body">
+                    @{
+                        var projectSites = Model["ProjectSites"] as List<ProjectSite>;
+                        if (projectSites != null && projectSites.Count > 0)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="bi bi-building"></i> Site Title</th>
+                                            <th><i class="bi bi-geo-alt"></i> Location</th>
+                                            <th style="text-align: center;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in projectSites)
+                                        {
+                                            <tr>
+                                                <td><strong>@item.SiteTitle</strong></td>
+                                                <td>@item.Location</td>
+                                                <td style="text-align: center;">
+                                                    <a asp-controller="ProjectSites" asp-action="Details" asp-route-id="@item.SiteID" class="btn btn-sm btn-primary">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <p style="color: #999; text-align: center; padding: 2rem;">
+                                <i class="bi bi-inbox" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                                No project site history available
+                            </p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Workers History -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-person-workspace"></i> Recently Viewed Site Workers
+                    </h5>
+                    <a asp-action="ClearSiteWorkerHistory" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-trash"></i> Clear
+                    </a>
+                </div>
+                <div class="card-body">
+                    @{
+                        var siteWorkers = Model["SiteWorkers"] as List<SiteWorker>;
+                        if (siteWorkers != null && siteWorkers.Count > 0)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="bi bi-person"></i> Name</th>
+                                            <th><i class="bi bi-envelope"></i> Email</th>
+                                            <th style="text-align: center;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in siteWorkers)
+                                        {
+                                            <tr>
+                                                <td><strong>@item.FirstName @item.LastName</strong></td>
+                                                <td>@item.Email</td>
+                                                <td style="text-align: center;">
+                                                    <a asp-controller="SiteWorkers" asp-action="Details" asp-route-id="@item.PersonID" class="btn btn-sm btn-primary">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <p style="color: #999; text-align: center; padding: 2rem;">
+                                <i class="bi bi-inbox" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                                No site worker history available
+                            </p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Owners History -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-person-vcard"></i> Recently Viewed Property Owners
+                    </h5>
+                    <a asp-action="ClearCurrentOwnerHistory" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-trash"></i> Clear
+                    </a>
+                </div>
+                <div class="card-body">
+                    @{
+                        var currentOwners = Model["CurrentOwners"] as List<CurrentOwner>;
+                        if (currentOwners != null && currentOwners.Count > 0)
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="bi bi-person"></i> Name</th>
+                                            <th><i class="bi bi-envelope"></i> Email</th>
+                                            <th style="text-align: center;">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in currentOwners)
+                                        {
+                                            <tr>
+                                                <td><strong>@item.FirstName @item.LastName</strong></td>
+                                                <td>@item.Email</td>
+                                                <td style="text-align: center;">
+                                                    <a asp-controller="CurrentOwners" asp-action="Details" asp-route-id="@item.PersonID" class="btn btn-sm btn-primary">
+                                                        <i class="bi bi-eye"></i> View
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                        else
+                        {
+                            <p style="color: #999; text-align: center; padding: 2rem;">
+                                <i class="bi bi-inbox" style="font-size: 2rem; display: block; margin-bottom: 1rem;"></i>
+                                No property owner history available
+                            </p>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 pt-3 border-top">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-outline-dark">
+            <i class="bi bi-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+
