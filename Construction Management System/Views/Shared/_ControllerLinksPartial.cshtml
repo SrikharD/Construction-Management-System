@@ -1,0 +1,45 @@
+﻿@if (User.Identity.IsAuthenticated)
+
+{
+    @*  <div class="controller-links text-center mt-4">
+        <h2>Your Available Pages</h2>     
+        <ul class="controller-links">
+            <li><a asp-controller="CurrentOwners" asp-action="Index" class="btn btn-dark"> <i class="bi bi-person-vcard"> </i> Owners</a></li>
+            <li><a asp-controller="SiteWorkers" asp-action="Index" class="btn btn-dark"> <i class="bi bi-person-workspace"> </i> Site Workers</a></li>
+            <li><a asp-controller="ProjectSites" asp-action="Index" class="btn btn-dark"> <i class="bi bi-house-door"> </i> Properties</a></li>
+            <li><a asp-controller="WorkOrders" asp-action="Index" class="btn btn-dark"> <i class="bi bi-journal-text"> </i> Work Orders</a></li>
+        </ul>
+    </div>  *@
+     <div class="controller-links text-center mt-4">
+            <h2>Your Available Pages</h2> 
+        <div class="text-center">
+            <div>
+                <a asp-controller="CurrentOwners" asp-action="Index" class="btn btn-dark">
+                    <i class="bi bi-person-vcard"></i> Owners
+                </a>
+            </div>
+            <br />
+            <div>
+                <a asp-controller="SiteWorkers" asp-action="Index" class="btn btn-dark">
+                    <i class="bi bi-person-workspace"></i> Site Workers
+                </a>
+            </div>
+            <br />
+            <div>
+                <a asp-controller="ProjectSites" asp-action="Index" class="btn btn-dark">
+                    <i class="bi bi-house-door"></i> Properties
+                </a>
+            </div>
+            <br />
+            <div>
+                <a asp-controller="WorkOrders" asp-action="Index" class="btn btn-dark">
+                    <i class="bi bi-journal-text"></i> Work Orders
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+            @* <li><a asp-controller="Tasks" asp-action="Index"><i class="bi bi-list-task"></i> Tasks</a></li> *@

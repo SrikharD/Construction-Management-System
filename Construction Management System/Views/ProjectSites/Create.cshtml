@@ -1,0 +1,112 @@
+﻿@model Dogiparthy_Spring25.Models.ProjectSite
+
+@{
+    ViewData["Title"] = "Create Project Site";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <h1 style="margin: 0; font-size: 2.5rem;">
+            <i class="bi bi-building"></i> Create New Project Site
+        </h1>
+        <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Add a new construction project site to the system</p>
+    </div>
+
+    <!-- Main Form -->
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <form asp-action="Create" method="post">
+                    <!-- Site Information Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-info-circle-fill"></i> Site Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" style="display: none;"></div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="SiteTitle" class="form-label fw-bold">Site Title</label>
+                                <input asp-for="SiteTitle" class="form-control" placeholder="Enter project site title" />
+                                <span asp-validation-for="SiteTitle" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Location" class="form-label fw-bold">Location</label>
+                                <input asp-for="Location" class="form-control" placeholder="Enter site location" />
+                                <span asp-validation-for="Location" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="SizeSqFt" class="form-label fw-bold">Size (Square Feet)</label>
+                                <input asp-for="SizeSqFt" class="form-control" type="number" placeholder="Enter size in sq ft" />
+                                <span asp-validation-for="SizeSqFt" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="SiteType" class="form-label fw-bold">Site Type</label>
+                                <select asp-for="SiteType" class="form-select">
+                                    <option value="">-- Select Site Type --</option>
+                                    <option>Residential</option>
+                                    <option>Commercial</option>
+                                    <option>Industrial</option>
+                                    <option>Mixed Use</option>
+                                </select>
+                                <span asp-validation-for="SiteType" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Owner Information Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-top: 1px solid #e0e0e0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-person-vcard"></i> Owner Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="CurrentOwnerPersonID" class="form-label fw-bold">Select Property Owner</label>
+                                <select asp-for="CurrentOwnerPersonID" class="form-select">
+                                    <option value="">-- Select Current Owner --</option>
+                                    @if (ViewBag.CurrentOwnerPersonID != null)
+                                    {
+                                        @foreach (var item in ViewBag.CurrentOwnerPersonID)
+                                        {
+                                            <option value="@item.Value">@item.Text</option>
+                                        }
+                                    }
+                                </select>
+                                <span asp-validation-for="CurrentOwnerPersonID" class="text-danger small"></span>
+                                <small class="text-muted">Choose the property owner associated with this site</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="card-body" style="background-color: #f8f9fa; border-top: 1px solid #e0e0e0; border-radius: 0 0 12px 12px;">
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle"></i> Create Site
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-dark">
+                                <i class="bi bi-arrow-left"></i> Cancel
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

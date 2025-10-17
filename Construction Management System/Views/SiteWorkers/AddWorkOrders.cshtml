@@ -1,0 +1,48 @@
+﻿@using Dogiparthy_Spring25.ViewModels;
+@model List<SiteWorker_AddWorkOrder_ViewModel>
+
+<h2>Add Work Orders to Property</h2>
+
+@if (Model.Count > 0)
+{
+    <form asp-action="AddWorkOrders">
+        <table class="table table-striped table-bordered table-hover table-md text-center">
+            <thead class="table-dark text-white">
+                <tr>
+                    <th>@Html.DisplayNameFor(m => m.First().WorkOrder.TaskName)</th>
+                    <th>@Html.DisplayNameFor(m => m.First().WorkOrder.Description)</th>
+                    <th>@Html.DisplayNameFor(m => m.First().WorkOrder.Status)</th>
+                    <th>@Html.DisplayNameFor(m => m.First().WorkOrder.EstimatedEndDate)</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(m => m[i].WorkOrder.TaskName)</td>
+                        <td>@Html.DisplayFor(m => m[i].WorkOrder.Description)</td>
+                        <td>@Html.DisplayFor(m => m[i].WorkOrder.Status)</td>
+                        <td>@Html.DisplayFor(m => m[i].WorkOrder.EstimatedEndDate)</td>
+                        <td>
+                            <input type="checkbox" asp-for="@Model[i].Selected" />
+                            <input type="hidden" asp-for="@Model[i].WorkOrder.WorkOrderID" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="form-control-sm">
+            <input type="submit" value="Add Work Order(s)" class="btn btn-success" />
+        </div>
+    </form>
+    <br />
+    <a asp-action="ManageWorkOrders" asp-route-id="@ViewBag.Id" class="btn btn-outline-dark">Back to Manage Work Orders</a>
+    <br />
+    <br />
+    <a asp-action="Index" class="btn btn-outline-dark">Back to Property List</a>
+}
+else
+{
+    <div>No Work Orders Available to Add</div>
+}

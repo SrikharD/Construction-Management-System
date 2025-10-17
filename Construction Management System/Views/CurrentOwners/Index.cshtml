@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Dogiparthy_Spring25.Models.CurrentOwner>
+
+@{
+    ViewData["Title"] = "Property Owners";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 style="margin: 0;">
+                <i class="bi bi-person-vcard"></i> Property Owners
+            </h2>
+            <small style="color: #666;">Manage all property owners and their information</small>
+        </div>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Add New Owner
+        </a>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><i class="bi bi-person"></i> First Name</th>
+                        <th><i class="bi bi-person"></i> Last Name</th>
+                        <th><i class="bi bi-envelope"></i> Email</th>
+                        <th><i class="bi bi-telephone"></i> Phone</th>
+                        <th><i class="bi bi-chat-dots"></i> Contact Method</th>
+                        <th><i class="bi bi-credit-card"></i> Payment Method</th>
+                        <th style="text-align: center;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><strong>@Html.DisplayFor(modelItem => item.FirstName)</strong></td>
+                            <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                            <td>
+                                <a href="mailto:@item.Email" style="color: #666; text-decoration: none; font-weight: 500;">
+                                    <i class="bi bi-envelope"></i> @item.Email
+                                </a>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                            <td>
+                                <span class="badge bg-info">@Html.DisplayFor(modelItem => item.PreferredContactMethod)</span>
+                            </td>
+                            <td>
+                                <span class="badge bg-secondary">@Html.DisplayFor(modelItem => item.PreferredPaymentMethod)</span>
+                            </td>
+                            <td style="text-align: center;">
+                                <div class="btn-group-action" style="justify-content: center;">
+                                    <a asp-action="Details" asp-route-id="@item.PersonID" class="btn btn-sm btn-primary" title="View Details">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@item.PersonID" class="btn btn-sm btn-warning" title="Edit">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.PersonID" class="btn btn-sm btn-danger" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div style="background: #f0f8ff; border-left: 4px solid #0066cc; padding: 2rem; border-radius: 8px; text-align: center;">
+            <i class="bi bi-inbox" style="font-size: 2rem; color: #0066cc; display: block; margin-bottom: 1rem;"></i>
+            <h4>No Property Owners Found</h4>
+            <p style="color: #666; margin-bottom: 1rem;">Start by adding your first property owner.</p>
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add New Owner
+            </a>
+        </div>
+    }
+
+
+
+    <div class="mt-4 pt-3 border-top">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-outline-dark">
+            <i class="bi bi-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>

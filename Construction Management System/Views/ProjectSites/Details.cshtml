@@ -1,0 +1,155 @@
+﻿@model Dogiparthy_Spring25.Models.ProjectSite
+
+@{
+    ViewData["Title"] = "Project Site Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 style="margin: 0; font-size: 2.5rem;">
+                    <i class="bi bi-building"></i> @Model.SiteTitle
+                </h1>
+                <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Project Site Details</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <span class="badge bg-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                    <i class="bi bi-geo-alt"></i> @Model.SiteType
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <!-- Site Information Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-info-circle-fill"></i> Site Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Site Title:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.SiteTitle)
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Site Type:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            <span class="badge bg-info" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">
+                                @Html.DisplayFor(model => model.SiteType)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Location:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            <i class="bi bi-geo-alt"></i> @Html.DisplayFor(model => model.Location)
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Size (Sq Ft):</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            <span class="badge bg-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                @Html.DisplayFor(model => model.SizeSqFt) sq ft
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Owner Information Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-person-vcard"></i> Owner Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Owner Name:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @if (Model.CurrentOwner != null)
+                            {
+                                <a href="@Url.Action("Details", "CurrentOwners", new { id = Model.CurrentOwner.PersonID })" class="text-decoration-none">
+                                    @Model.CurrentOwner.FirstName @Model.CurrentOwner.LastName
+                                </a>
+                            }
+                            else
+                            {
+                                <span style="color: #999;">Not Assigned</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Owner Email:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @if (Model.CurrentOwner != null)
+                            {
+                                <a href="mailto:@Model.CurrentOwner.Email" style="color: #666; text-decoration: none; font-weight: 500; padding: 0.25rem 0.75rem; background: #f0f0f0; border-radius: 6px; display: inline-block;">
+                                    <i class="bi bi-envelope"></i> @Model.CurrentOwner.Email
+                                </a>
+                            }
+                            else
+                            {
+                                <span style="color: #999;">N/A</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Owner Phone:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @if (Model.CurrentOwner != null)
+                            {
+                                <a href="tel:@Model.CurrentOwner.PhoneNumber" style="color: #666; text-decoration: none; font-weight: 500; padding: 0.25rem 0.75rem; background: #f0f0f0; border-radius: 6px; display: inline-block;">
+                                    <i class="bi bi-telephone"></i> @Model.CurrentOwner.PhoneNumber
+                                </a>
+                            }
+                            else
+                            {
+                                <span style="color: #999;">N/A</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="row">
+        <div class="col-md-12">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a asp-action="Edit" asp-route-id="@Model?.SiteID" class="btn btn-primary">
+                    <i class="bi bi-pencil"></i> Edit Site
+                </a>
+                <a asp-action="Index" class="btn btn-outline-dark">
+                    <i class="bi bi-arrow-left"></i> Return to Sites
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

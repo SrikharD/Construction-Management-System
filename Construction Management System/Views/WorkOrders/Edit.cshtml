@@ -1,0 +1,109 @@
+﻿@model Dogiparthy_Spring25.Models.WorkOrder
+
+@{
+    ViewData["Title"] = "Edit Work Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <h1 style="margin: 0; font-size: 2.5rem;">
+            <i class="bi bi-pencil-square"></i> Edit Work Order
+        </h1>
+        <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Update information for @Model.TaskName</p>
+    </div>
+
+    <!-- Main Form -->
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <form asp-action="Edit" method="post">
+                    <!-- Task Information Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-list-task"></i> Task Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" style="display: none;"></div>
+                        <input type="hidden" asp-for="WorkOrderID" />
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="TaskName" class="form-label fw-bold">Task Name</label>
+                                <input asp-for="TaskName" class="form-control" placeholder="Enter task name" />
+                                <span asp-validation-for="TaskName" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="Description" class="form-label fw-bold">Description</label>
+                                <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter detailed description of the work order"></textarea>
+                                <span asp-validation-for="Description" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Status" class="form-label fw-bold">Status</label>
+                                <select asp-for="Status" class="form-select" asp-items="ViewBag.TaskStatus">
+                                    <option value="">-- Select Status --</option>
+                                </select>
+                                <span asp-validation-for="Status" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="EstimatedEndDate" class="form-label fw-bold">Estimated End Date</label>
+                                <input asp-for="EstimatedEndDate" class="form-control" type="date" />
+                                <span asp-validation-for="EstimatedEndDate" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Site Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-top: 1px solid #e0e0e0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-building"></i> Project Site
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="PropertyID" class="form-label fw-bold">Select Project Site</label>
+                                <select asp-for="PropertyID" class="form-select">
+                                    <option value="">-- Select Project Site --</option>
+                                    @if (ViewBag.PropertyID != null)
+                                    {
+                                        @foreach (var item in ViewBag.PropertyID)
+                                        {
+                                            <option value="@item.Value">@item.Text</option>
+                                        }
+                                    }
+                                </select>
+                                <span asp-validation-for="PropertyID" class="text-danger small"></span>
+                                <small class="text-muted">Choose the project site for this work order</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="card-body" style="background-color: #f8f9fa; border-top: 1px solid #e0e0e0; border-radius: 0 0 12px 12px;">
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle"></i> Save Changes
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-dark">
+                                <i class="bi bi-arrow-left"></i> Cancel
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

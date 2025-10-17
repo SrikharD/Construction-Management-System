@@ -1,0 +1,84 @@
+﻿<!-- Created By: Srikhar Dogiparthy-->
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div id="sidebar">
+    <div style="padding: 0 1.5rem; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <h5 style="color: white; margin-bottom: 0.5rem;">
+            <i class="bi bi-building"></i> CMS
+        </h5>
+        <small style="color: rgba(255,255,255,0.7);">Construction Management</small>
+    </div>
+
+    <a asp-controller="Home" asp-action="Index">
+        <i class="bi bi-house-door"></i>
+        <span>Home</span>
+    </a>
+
+    @if (User.IsInRole("Admin") || User.IsInRole("Supervisor"))
+    {
+        <div style="padding: 1rem 1.5rem; margin-top: 1rem; margin-bottom: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">
+            Management
+        </div>
+        <a asp-controller="ProjectSites" asp-action="Index">
+            <i class="bi bi-house-fill"></i>
+            <span>Project Sites</span>
+        </a>
+        <a asp-controller="WorkOrders" asp-action="Index">
+            <i class="bi bi-clipboard-check"></i>
+            <span>Work Orders</span>
+        </a>
+        <a asp-controller="SiteWorkers" asp-action="Index">
+            <i class="bi bi-person-workspace"></i>
+            <span>Site Workers</span>
+        </a>
+        <a asp-controller="CurrentOwners" asp-action="Index">
+            <i class="bi bi-person-vcard"></i>
+            <span>Property Owners</span>
+        </a>
+    }
+
+    <div style="padding: 1rem 1.5rem; margin-top: 1rem; margin-bottom: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">
+        History & Tracking
+    </div>
+
+    <a asp-controller="History" asp-action="Index">
+        <i class="bi bi-clock-history"></i>
+        <span>View History</span>
+    </a>
+
+    <div style="padding: 1rem 1.5rem; margin-top: 1rem; margin-bottom: 0.5rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 600; text-transform: uppercase;">
+        Account
+    </div>
+
+    <a asp-controller="Home" asp-action="Privacy">
+        <i class="bi bi-shield-lock"></i>
+        <span>Privacy</span>
+    </a>
+
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <a asp-area="Identity" asp-page="/Account/Manage/Index">
+            <i class="bi bi-person-circle"></i>
+            <span>Profile Settings</span>
+        </a>
+        <form asp-area="Identity" asp-page="/Account/Logout" method="post" style="margin: 0;">
+            <button type="submit" class="sidebar-button">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </button>
+        </form>
+    }
+    else
+    {
+        <a asp-area="Identity" asp-page="/Account/Login">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+        </a>
+        <a asp-area="Identity" asp-page="/Account/Register">
+            <i class="bi bi-person-plus"></i>
+            <span>Register</span>
+        </a>
+    }
+</div>

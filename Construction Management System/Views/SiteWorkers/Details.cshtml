@@ -1,0 +1,212 @@
+﻿@model Dogiparthy_Spring25.Models.SiteWorker
+
+@{
+    ViewData["Title"] = "Worker Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 style="margin: 0; font-size: 2.5rem;">
+                    <i class="bi bi-person-badge"></i> @Model.FirstName @Model.LastName
+                </h1>
+                <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Site Worker Details</p>
+            </div>
+            <div class="col-md-4 text-md-end">
+                @if (Model.IsAvailable)
+                {
+                    <span class="badge bg-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                        <i class="bi bi-check-circle"></i> Available
+                    </span>
+                }
+                else
+                {
+                    <span class="badge bg-danger" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                        <i class="bi bi-x-circle"></i> Not Available
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+        <!-- Personal Information Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-person-fill"></i> Personal Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>First Name:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.FirstName)
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Last Name:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.LastName)
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Email:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            <a href="mailto:@Model.Email" style="color: #666; text-decoration: none; font-weight: 500; padding: 0.25rem 0.75rem; background: #f0f0f0; border-radius: 6px; display: inline-block;">
+                                <i class="bi bi-envelope"></i> @Model.Email
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Phone:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            <a href="tel:@Model.PhoneNumber" style="color: #666; text-decoration: none; font-weight: 500; padding: 0.25rem 0.75rem; background: #f0f0f0; border-radius: 6px; display: inline-block;">
+                                <i class="bi bi-telephone"></i> @Model.PhoneNumber
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Date of Birth:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.DOB, "{0:MM/dd/yyyy}")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employment Information Card -->
+        <div class="col-md-6 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-briefcase-fill"></i> Employment Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Start Date:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @Html.DisplayFor(model => model.StartDate, "{0:MM/dd/yyyy}")
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Hourly Wage:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            <span class="badge bg-success" style="font-size: 0.9rem; padding: 0.5rem 1rem;">
+                                $@Html.DisplayFor(model => model.HourlyWage)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-5">
+                            <strong>Availability:</strong>
+                        </div>
+                        <div class="col-sm-7">
+                            @if (Model.IsAvailable)
+                            {
+                                <span class="badge bg-success">
+                                    <i class="bi bi-check-circle"></i> Available
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-x-circle"></i> Not Available
+                                </span>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Information Card -->
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-geo-alt-fill"></i> Address Information
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <strong>Address Line 1:</strong>
+                            <br />
+                            @Html.DisplayFor(model => model.Address1)
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <strong>Address Line 2:</strong>
+                            <br />
+                            @if (!string.IsNullOrEmpty(Model.Address2))
+                            {
+                                @Html.DisplayFor(model => model.Address2)
+                            }
+                            else
+                            {
+                                <span style="color: #999;">N/A</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <strong>City:</strong>
+                            <br />
+                            @Html.DisplayFor(model => model.City)
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <strong>State:</strong>
+                            <br />
+                            @Html.DisplayFor(model => model.State)
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <strong>Zip Code:</strong>
+                            <br />
+                            @Html.DisplayFor(model => model.ZipCode)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="row">
+        <div class="col-md-12">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a asp-action="Edit" asp-route-id="@Model?.PersonID" class="btn btn-primary">
+                    <i class="bi bi-pencil"></i> Edit Worker
+                </a>
+                <a asp-action="Index" class="btn btn-outline-dark">
+                    <i class="bi bi-arrow-left"></i> Return to Workers
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

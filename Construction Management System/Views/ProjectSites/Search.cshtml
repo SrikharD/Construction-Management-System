@@ -1,0 +1,120 @@
+﻿@model Dogiparthy_Spring25.ViewModels.ProjectSiteSearchViewModel
+
+@{
+    ViewData["Title"] = "Search Project Sites";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <h1 style="margin: 0; font-size: 2.5rem;">
+            <i class="bi bi-search"></i> Search Project Sites
+        </h1>
+        <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Find project sites by title</p>
+    </div>
+
+    <!-- Search Form Card -->
+    <div class="row mb-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                    <h5 style="margin: 0;">
+                        <i class="bi bi-funnel"></i> Search Criteria
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Search" method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="ProjectSite.SiteTitle" class="form-label fw-bold">
+                                <i class="bi bi-building"></i> Site Title
+                            </label>
+                            <input asp-for="ProjectSite.SiteTitle" class="form-control form-control-lg" placeholder="Enter site title to search..." />
+                            <span asp-validation-for="ProjectSite" class="text-danger small"></span>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; justify-content: center;">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-search"></i> Search
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary btn-lg">
+                                <i class="bi bi-arrow-left"></i> Back to List
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Message -->
+    @if (!string.IsNullOrEmpty(Model.SearchError))
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle"></i>
+            <strong>Search Notice:</strong> @Model.SearchError
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Results Section -->
+    @if (Model.ResultList.Count > 0)
+    {
+        <div class="row">
+            <div class="col-12">
+                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                    <h4 style="margin-bottom: 1.5rem;">
+                        <i class="bi bi-list-check"></i> Search Results (@Model.ResultList.Count found)
+                    </h4>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead style="background: #f8f9fa;">
+                                <tr>
+                                    <th><i class="bi bi-building"></i> Site Title</th>
+                                    <th><i class="bi bi-geo-alt"></i> Location</th>
+                                    <th><i class="bi bi-rulers"></i> Size (Sq Ft)</th>
+                                    <th><i class="bi bi-tag"></i> Type</th>
+                                    <th style="text-align: center;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var site in Model.ResultList)
+                                {
+                                    <tr>
+                                        <td><strong>@site.SiteTitle</strong></td>
+                                        <td>@site.Location</td>
+                                        <td>@site.SizeSqFt</td>
+                                        <td><span class="badge bg-secondary">@site.SiteType</span></td>
+                                        <td style="text-align: center;">
+                                            <a asp-action="Details" asp-controller="ProjectSites" asp-route-id="@site.SiteID" class="btn btn-sm btn-primary">
+                                                <i class="bi bi-eye"></i> View Details
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else if (Model.ResultList.Count == 0 && !string.IsNullOrEmpty(Model.SearchError))
+    {
+        <div style="background: #f0f8ff; border-left: 4px solid #0066cc; padding: 2rem; border-radius: 8px; text-align: center;">
+            <i class="bi bi-search" style="font-size: 2rem; color: #0066cc; display: block; margin-bottom: 1rem;"></i>
+            <h4>No Results Found</h4>
+            <p style="color: #666; margin-bottom: 1rem;">Try searching with different keywords or browse all sites.</p>
+            <a asp-action="Index" class="btn btn-primary">
+                <i class="bi bi-list"></i> View All Sites
+            </a>
+        </div>
+    }
+
+    <div class="mt-4 pt-3 border-top">
+        <a asp-action="Index" class="btn btn-outline-dark">
+            <i class="bi bi-arrow-left"></i> Back to Project Sites
+        </a>
+    </div>
+</div>

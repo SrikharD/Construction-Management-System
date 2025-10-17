@@ -1,0 +1,30 @@
+﻿@model WorkAllocation
+
+@{
+    ViewData["Title"] = "Remove Site Worker";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Remove Site Worker</h2>
+
+<h4>Are you sure you want to remove this worker from the work order?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">Worker Name</dt>
+    <dd class="col-sm-10">@Model.SiteWorker.FirstName @Model.SiteWorker.LastName</dd>
+
+    <dt class="col-sm-2">Task Name</dt>
+    <dd class="col-sm-10">@Model.WorkOrder.TaskName</dd>
+
+    <dt class="col-sm-2">Assigned Date</dt>
+    <dd class="col-sm-10">@Model.AssignedDate.ToShortDateString()</dd>
+</dl>
+
+<form asp-action="DeleteSiteWorker" method="post">
+    <input type="hidden" asp-for="WorkID" />
+    <button type="submit" class="btn btn-danger">Remove</button> 
+    <br />
+    <br />
+    <a asp-action="ManageSiteWorkers" asp-route-id="@Model.WorkOrderID" class="btn btn-secondary">Cancel</a>
+</form>

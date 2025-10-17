@@ -1,0 +1,172 @@
+﻿@model Dogiparthy_Spring25.Models.CurrentOwner
+
+@{
+    ViewData["Title"] = "Edit Current Owner";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <h1 style="margin: 0; font-size: 2.5rem;">
+            <i class="bi bi-pencil-square"></i> Edit Current Owner
+        </h1>
+        <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">Update information for @Model.FirstName @Model.LastName</p>
+    </div>
+
+    <!-- Main Form -->
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+                <form asp-action="Edit" method="post">
+                    <!-- Personal Information Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-radius: 12px 12px 0 0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-person-fill"></i> Personal Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" style="display: none;"></div>
+                        <input type="hidden" asp-for="PersonID" />
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="FirstName" class="form-label fw-bold">First Name</label>
+                                <input asp-for="FirstName" class="form-control" placeholder="Enter first name" />
+                                <span asp-validation-for="FirstName" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="LastName" class="form-label fw-bold">Last Name</label>
+                                <input asp-for="LastName" class="form-control" placeholder="Enter last name" />
+                                <span asp-validation-for="LastName" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="Email" class="form-label fw-bold">Email</label>
+                                <input asp-for="Email" class="form-control" placeholder="Enter email address" />
+                                <span asp-validation-for="Email" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PhoneNumber" class="form-label fw-bold">Phone Number</label>
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="Enter phone number" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="DOB" class="form-label fw-bold">Date of Birth</label>
+                                <input asp-for="DOB" class="form-control" type="date" />
+                                <span asp-validation-for="DOB" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="Occupation" class="form-label fw-bold">Occupation</label>
+                                <input asp-for="Occupation" class="form-control" placeholder="Enter occupation" />
+                                <span asp-validation-for="Occupation" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address Information Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-top: 1px solid #e0e0e0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-geo-alt-fill"></i> Address Information
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="Address1" class="form-label fw-bold">Address Line 1</label>
+                                <input asp-for="Address1" class="form-control" placeholder="Enter street address" />
+                                <span asp-validation-for="Address1" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label asp-for="Address2" class="form-label fw-bold">Address Line 2 (Optional)</label>
+                                <input asp-for="Address2" class="form-control" placeholder="Enter apartment, suite, etc." />
+                                <span asp-validation-for="Address2" class="text-danger small"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="City" class="form-label fw-bold">City</label>
+                                <input asp-for="City" class="form-control" placeholder="Enter city" />
+                                <span asp-validation-for="City" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <label asp-for="State" class="form-label fw-bold">State</label>
+                                <input asp-for="State" class="form-control" placeholder="Enter state" />
+                                <span asp-validation-for="State" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <label asp-for="ZipCode" class="form-label fw-bold">Zip Code</label>
+                                <input asp-for="ZipCode" class="form-control" placeholder="Enter zip code" />
+                                <span asp-validation-for="ZipCode" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Section -->
+                    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 1.5rem; border-top: 1px solid #e0e0e0;">
+                        <h5 style="margin: 0;">
+                            <i class="bi bi-gear-fill"></i> Preferences
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label asp-for="PreferredContactMethod" class="form-label fw-bold">Preferred Contact Method</label>
+                                <select asp-for="PreferredContactMethod" class="form-select">
+                                    <option value="">-- Select Contact Method --</option>
+                                    <option>SMS</option>
+                                    <option>Email</option>
+                                    <option>Phone</option>
+                                </select>
+                                <span asp-validation-for="PreferredContactMethod" class="text-danger small"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="PreferredPaymentMethod" class="form-label fw-bold">Preferred Payment Method</label>
+                                <select asp-for="PreferredPaymentMethod" class="form-select">
+                                    <option value="">-- Select Payment Method --</option>
+                                    <option>Cash</option>
+                                    <option>Card</option>
+                                    <option>Check</option>
+                                    <option>Bank Transfer</option>
+                                </select>
+                                <span asp-validation-for="PreferredPaymentMethod" class="text-danger small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="card-body" style="background-color: #f8f9fa; border-top: 1px solid #e0e0e0; border-radius: 0 0 12px 12px;">
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle"></i> Save Changes
+                            </button>
+                            <a asp-action="Index" class="btn btn-outline-dark">
+                                <i class="bi bi-arrow-left"></i> Cancel
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["DOBError"] != null)
+{
+    <script>
+        alert("@TempData["DOBError"]");
+    </script>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

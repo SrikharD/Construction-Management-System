@@ -1,0 +1,286 @@
+﻿@model IEnumerable<WorkAllocation>
+
+@{
+    ViewData["Title"] = "Worker Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <!-- Header Section with Worker Info -->
+    <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div>
+                <h1 style="margin: 0; font-size: 2.5rem;">
+                    <i class="bi bi-person-badge"></i> @ViewBag.SiteWorkerName
+                </h1>
+                <p style="margin: 0.5rem 0 0 0; color: rgba(255,255,255,0.8);">
+                    <i class="bi bi-envelope"></i> @ViewBag.SiteWorkerEmail
+                </p>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">
+                    <i class="bi bi-briefcase"></i> Hourly Rate: <strong>$@ViewBag.HourlyWage</strong>
+                </div>
+                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.8); margin-top: 0.5rem;">
+                    <i class="bi bi-calendar"></i> Years of Service: <strong>@ViewBag.YearsOfService</strong>
+                </div>
+                <div style="font-size: 0.9rem; margin-top: 0.5rem;">
+                    @if (ViewBag.IsAvailable)
+                    {
+                        <span style="background: #28a745; padding: 0.25rem 0.75rem; border-radius: 20px; color: white;">
+                            <i class="bi bi-check-circle"></i> Available
+                        </span>
+                    }
+                    else
+                    {
+                        <span style="background: #ff9800; padding: 0.25rem 0.75rem; border-radius: 20px; color: white;">
+                            <i class="bi bi-hourglass-split"></i> Busy
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Dashboard -->
+    <div class="row mb-4">
+        <!-- Total Work Orders -->
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 2.5rem; font-weight: 700;">@ViewBag.TotalWorkOrders</div>
+                <div style="font-size: 0.9rem; opacity: 0.9;">Total Work Orders</div>
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.8;">All assigned tasks</div>
+            </div>
+        </div>
+
+        <!-- Not Started -->
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div style="background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 2.5rem; font-weight: 700;">@ViewBag.NotStartedCount</div>
+                <div style="font-size: 0.9rem; opacity: 0.9;">Not Started</div>
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.8;">Pending tasks</div>
+            </div>
+        </div>
+
+        <!-- In Progress -->
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div style="background: linear-gradient(135deg, #17a2b8 0%, #0c5460 100%); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 2.5rem; font-weight: 700;">@ViewBag.InProgressCount</div>
+                <div style="font-size: 0.9rem; opacity: 0.9;">In Progress</div>
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.8;">Currently working</div>
+            </div>
+        </div>
+
+        <!-- Completed -->
+        <div class="col-md-3 col-sm-6 mb-3">
+            <div style="background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%); color: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <div style="font-size: 2.5rem; font-weight: 700;">@ViewBag.CompletedCount</div>
+                <div style="font-size: 0.9rem; opacity: 0.9;">Completed</div>
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.8;">Finished tasks</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance & Experience Section -->
+    <div class="row mb-4">
+        <!-- Completion Progress -->
+        <div class="col-md-6 mb-3">
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin-bottom: 1rem; color: #333;">
+                    <i class="bi bi-graph-up"></i> Completion Progress
+                </h5>
+                <div style="margin-bottom: 0.5rem; display: flex; justify-content: space-between;">
+                    <span style="color: #666;">Overall Progress</span>
+                    <strong style="color: #667eea;">@ViewBag.CompletionPercentage%</strong>
+                </div>
+                <div style="background: #e9ecef; border-radius: 10px; height: 25px; overflow: hidden;">
+                    <div style="background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); height: 100%; width: @ViewBag.CompletionPercentage%; transition: width 0.3s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.8rem; font-weight: bold;">
+                        @if (ViewBag.CompletionPercentage > 10)
+                        {
+                            <span>@ViewBag.CompletionPercentage%</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience & Rating -->
+        <div class="col-md-6 mb-3">
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin-bottom: 1rem; color: #333;">
+                    <i class="bi bi-star"></i> Experience & Rating
+                </h5>
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: #666;">Level</span>
+                        <strong style="color: #667eea;">@ViewBag.ExperienceLevel</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                        <span style="color: #666;">Experience Score</span>
+                        <strong style="color: #667eea;">@ViewBag.ExperienceScore pts</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: #666;">Performance Rating</span>
+                        <div>
+                            @for (int i = 0; i < 5; i++)
+                            {
+                                if (i < Math.Floor(ViewBag.PerformanceRating))
+                                {
+                                    <i class="bi bi-star-fill" style="color: #ffc107; margin-right: 0.25rem;"></i>
+                                }
+                                else if (i < ViewBag.PerformanceRating)
+                                {
+                                    <i class="bi bi-star-half" style="color: #ffc107; margin-right: 0.25rem;"></i>
+                                }
+                                else
+                                {
+                                    <i class="bi bi-star" style="color: #ddd; margin-right: 0.25rem;"></i>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- On Hold Alert -->
+    @if (ViewBag.OnHoldCount > 0)
+    {
+        <div class="alert alert-warning" role="alert">
+            <i class="bi bi-exclamation-triangle"></i>
+            <strong>On Hold:</strong> You have @ViewBag.OnHoldCount work order(s) on hold. Please review and resume when possible.
+        </div>
+    }
+
+    <!-- Work Orders Table with Enhanced Styling -->
+    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+        <h5 style="margin-bottom: 1.5rem; color: #333;">
+            <i class="bi bi-list-check"></i> Work Order Details
+        </h5>
+        <div class="table-responsive">
+            <table class="table table-hover" style="margin-bottom: 0;">
+                <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <tr>
+                        <th><i class="bi bi-list-task"></i> Task Name</th>
+                        <th><i class="bi bi-file-text"></i> Description</th>
+                        <th><i class="bi bi-hourglass-split"></i> Status</th>
+                        <th><i class="bi bi-house-fill"></i> Project Site</th>
+                        <th><i class="bi bi-calendar-event"></i> Estimated End</th>
+                        <th><i class="bi bi-calendar-check"></i> Assigned</th>
+                        <th style="text-align: center;"><i class="bi bi-gear"></i> Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr style="border-left: 4px solid @(item.WorkOrder.Status.ToString() switch
+                        {
+                            "NotStarted" => "#ffc107",
+                            "InProgress" => "#17a2b8",
+                            "Completed" => "#28a745",
+                            "OnHold" => "#dc3545",
+                            _ => "#6c757d"
+                        });">
+                            <td><strong>@Html.DisplayFor(i => item.WorkOrder.TaskName)</strong></td>
+                            <td>
+                                @{
+                                    var description = item.WorkOrder.Description;
+                                    if (description != null && description.Length > 40)
+                                    {
+                                        <span title="@description">@description.Substring(0, 40)...</span>
+                                    }
+                                    else
+                                    {
+                                        @description
+                                    }
+                                }
+                            </td>
+                            <td>
+                                @{
+                                    var statusBadgeClass = item.WorkOrder.Status.ToString() switch
+                                    {
+                                        "NotStarted" => "bg-warning",
+                                        "InProgress" => "bg-info",
+                                        "Completed" => "bg-success",
+                                        "OnHold" => "bg-danger",
+                                        _ => "bg-secondary"
+                                    };
+                                    var statusIcon = item.WorkOrder.Status.ToString() switch
+                                    {
+                                        "NotStarted" => "bi-clock",
+                                        "InProgress" => "bi-play-circle",
+                                        "Completed" => "bi-check-circle",
+                                        "OnHold" => "bi-pause-circle",
+                                        _ => "bi-question-circle"
+                                    };
+                                }
+                                <span class="badge @statusBadgeClass">
+                                    <i class="bi @statusIcon"></i> @Html.DisplayFor(i => item.WorkOrder.Status)
+                                </span>
+                            </td>
+                            <td>
+                                <strong>@Html.DisplayFor(i => item.WorkOrder.ProjectSite.SiteTitle)</strong>
+                                <br />
+                                <small style="color: #666;">@Html.DisplayFor(i => item.WorkOrder.ProjectSite.Location)</small>
+                            </td>
+                            <td>@Html.DisplayFor(i => item.WorkOrder.EstimatedEndDate, "{0:MM/dd/yyyy}")</td>
+                            <td>@Html.DisplayFor(i => item.AssignedDate, "{0:MM/dd/yyyy}")</td>
+                            <td style="text-align: center;">
+                                <form asp-action="DeleteWorkOrder" method="post" style="display: inline;">
+                                    <input type="hidden" name="id" value="@item.WorkID" />
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to remove this work order assignment?');">
+                                        <i class="bi bi-trash"></i> Remove
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Status Legend -->
+    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin-bottom: 2rem;">
+        <h5 style="margin-bottom: 1.5rem; color: #333;">
+            <i class="bi bi-info-circle"></i> Status Legend
+        </h5>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div style="padding: 1rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+                    <span class="badge bg-warning" style="padding: 0.5rem 1rem;"><i class="bi bi-clock"></i> Not Started</span>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; margin-bottom: 0;">Work order assigned but not yet started</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div style="padding: 1rem; background: #cfe2ff; border-radius: 8px; border-left: 4px solid #0d6efd;">
+                    <span class="badge bg-info" style="padding: 0.5rem 1rem;"><i class="bi bi-play-circle"></i> In Progress</span>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; margin-bottom: 0;">Currently being worked on</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div style="padding: 1rem; background: #f8d7da; border-radius: 8px; border-left: 4px solid #dc3545;">
+                    <span class="badge bg-danger" style="padding: 0.5rem 1rem;"><i class="bi bi-pause-circle"></i> On Hold</span>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; margin-bottom: 0;">Temporarily paused</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div style="padding: 1rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid #198754;">
+                    <span class="badge bg-success" style="padding: 0.5rem 1rem;"><i class="bi bi-check-circle"></i> Completed</span>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; margin-bottom: 0;">Successfully completed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a asp-action="AddWorkOrders" asp-route-id="@ViewBag.Id" class="btn btn-primary" style="padding: 0.75rem 1.5rem;">
+            <i class="bi bi-plus-circle"></i> Add More Work Orders
+        </a>
+        <a asp-action="Index" class="btn btn-outline-dark" style="padding: 0.75rem 1.5rem;">
+            <i class="bi bi-arrow-left"></i> Back to Site Workers
+        </a>
+    </div>
+</div>

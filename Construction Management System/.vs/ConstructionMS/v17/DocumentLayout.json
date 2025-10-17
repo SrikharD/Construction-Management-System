@@ -1,0 +1,982 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\controllers\\siteworkerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:controllers\\siteworkerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\controllers\\currentownerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:controllers\\currentownerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\viewmodels\\siteworker_addworkorder_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:viewmodels\\siteworker_addworkorder_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\controllers\\workorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:controllers\\workorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\controllers\\projectsitescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:controllers\\projectsitescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\currentowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\currentowner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\workallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\workallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\projectsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\projectsite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\currentowners\\_partialownerprojectsites.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\currentowners\\_partialownerprojectsites.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\viewmodels\\projectsitesearchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:viewmodels\\projectsitesearchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\currentowners\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\currentowners\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\currentowners\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\currentowners\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\viewmodels\\workorder_addsiteworker_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:viewmodels\\workorder_addsiteworker_viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\projectsites\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\projectsites\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\currentowners\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\currentowners\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\currentowners\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\currentowners\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\shared\\_sidebarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\shared\\_sidebarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\shared\\_controllerlinkspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\shared\\_controllerlinkspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\siteworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\siteworker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:sessionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\addworkorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\addworkorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\workorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\workorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|ConstructionMS.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\constructionms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|ConstructionMS.csproj|solutionrelative:constructionms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\projectsites\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\projectsites\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dogiparthy_Spring25/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\deletesiteworker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\deletesiteworker.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\deleteworkorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\deleteworkorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\managesiteworkers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\managesiteworkers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\currentowners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\currentowners\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\workorders\\assignsiteworkers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\workorders\\assignsiteworkers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\projectsites\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\projectsites\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\projectsites\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\projectsites\\search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\projectsites\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\projectsites\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\siteworkers\\manageworkorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\siteworkers\\manageworkorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\projectsites\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\projectsites\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|d:\\559 - dotnet2\\dogiparthy_spring25\\dogiparthy_spring25\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BCE4C05-FF22-4B79-939A-14DD46EC919B}|Dogiparthy_Spring25.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\559\\EXAMMMMMMMMMMMMMMM\\Dogiparthy_Spring25\\Data\\Migrations\\20250504232828_addedModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CurrentOwnersController.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\CurrentOwnersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CurrentOwnersController.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\CurrentOwnersController.cs",
+              "RelativeToolTip": "Controllers\\CurrentOwnersController.cs",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAWwKwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:25:30.176Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SiteWorkersController.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\SiteWorkersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SiteWorkersController.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\SiteWorkersController.cs",
+              "RelativeToolTip": "Controllers\\SiteWorkersController.cs",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAMwF0BAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:33:48.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:22:11.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectSitesController.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\ProjectSitesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectSitesController.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\ProjectSitesController.cs",
+              "RelativeToolTip": "Controllers\\ProjectSitesController.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAMwG0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:31:17.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WorkOrdersController.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\WorkOrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WorkOrdersController.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\WorkOrdersController.cs",
+              "RelativeToolTip": "Controllers\\WorkOrdersController.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAD4v8cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T00:28:49.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SiteWorker_AddWorkOrder_ViewModel.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ViewModels\\SiteWorker_AddWorkOrder_ViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\SiteWorker_AddWorkOrder_ViewModel.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ViewModels\\SiteWorker_AddWorkOrder_ViewModel.cs",
+              "RelativeToolTip": "ViewModels\\SiteWorker_AddWorkOrder_ViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T06:13:52.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Constants.cs",
+              "RelativeDocumentMoniker": "Constants.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Constants.cs",
+              "RelativeToolTip": "Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:22:10.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAgwKsAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-04T23:37:21.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAD4v0IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T15:06:07.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\SeedData.cs",
+              "RelativeDocumentMoniker": "SeedData.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\SeedData.cs",
+              "RelativeToolTip": "SeedData.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwFYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:22:13.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAD4v2IAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T19:48:07.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CurrentOwner.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\CurrentOwner.cs",
+              "RelativeDocumentMoniker": "Models\\CurrentOwner.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\CurrentOwner.cs",
+              "RelativeToolTip": "Models\\CurrentOwner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:24:40.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WorkAllocation.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\WorkAllocation.cs",
+              "RelativeDocumentMoniker": "Models\\WorkAllocation.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\WorkAllocation.cs",
+              "RelativeToolTip": "Models\\WorkAllocation.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA1wA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T00:15:34.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProjectSiteSearchViewModel.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ViewModels\\ProjectSiteSearchViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProjectSiteSearchViewModel.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ViewModels\\ProjectSiteSearchViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ProjectSiteSearchViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T15:29:27.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProjectSite.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\ProjectSite.cs",
+              "RelativeDocumentMoniker": "Models\\ProjectSite.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\ProjectSite.cs",
+              "RelativeToolTip": "Models\\ProjectSite.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:19:38.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:18:52.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\CurrentOwners\\Edit.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Edit.cshtml",
+              "RelativeToolTip": "Views\\CurrentOwners\\Edit.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAIBJwG4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T19:02:20.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_PartialOwnerProjectSites.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\_PartialOwnerProjectSites.cshtml",
+              "RelativeDocumentMoniker": "Views\\CurrentOwners\\_PartialOwnerProjectSites.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\_PartialOwnerProjectSites.cshtml",
+              "RelativeToolTip": "Views\\CurrentOwners\\_PartialOwnerProjectSites.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T04:37:36.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\CurrentOwners\\Create.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Create.cshtml",
+              "RelativeToolTip": "Views\\CurrentOwners\\Create.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAIBJwAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:26:19.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WorkOrder_AddSiteWorker_ViewModel.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ViewModels\\WorkOrder_AddSiteWorker_ViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\WorkOrder_AddSiteWorker_ViewModel.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ViewModels\\WorkOrder_AddSiteWorker_ViewModel.cs",
+              "RelativeToolTip": "ViewModels\\WorkOrder_AddSiteWorker_ViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T06:13:57.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectSites\\Create.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Create.cshtml",
+              "RelativeToolTip": "Views\\ProjectSites\\Create.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAIBJwC0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:40:52.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\CurrentOwners\\Delete.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Delete.cshtml",
+              "RelativeToolTip": "Views\\CurrentOwners\\Delete.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAIBJwG4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T18:36:14.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\CurrentOwners\\Details.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Details.cshtml",
+              "RelativeToolTip": "Views\\CurrentOwners\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T04:35:37.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-04T23:37:17.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\Person.cs",
+              "RelativeDocumentMoniker": "Models\\Person.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\Person.cs",
+              "RelativeToolTip": "Models\\Person.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwCcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T14:59:07.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_SidebarMenu.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\Shared\\_SidebarMenu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_SidebarMenu.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\Shared\\_SidebarMenu.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_SidebarMenu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-06T19:56:57.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_ControllerLinksPartial.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\Shared\\_ControllerLinksPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ControllerLinksPartial.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\Shared\\_ControllerLinksPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ControllerLinksPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:36:26.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SiteWorker.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\SiteWorker.cs",
+              "RelativeDocumentMoniker": "Models\\SiteWorker.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\SiteWorker.cs",
+              "RelativeToolTip": "Models\\SiteWorker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T01:46:16.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SessionExtensions.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\SessionExtensions.cs",
+              "RelativeDocumentMoniker": "SessionExtensions.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\SessionExtensions.cs",
+              "RelativeToolTip": "SessionExtensions.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAABRwAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T02:14:54.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AddWorkOrders.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\AddWorkOrders.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\AddWorkOrders.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\AddWorkOrders.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\AddWorkOrders.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T00:14:24.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WorkOrder.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\WorkOrder.cs",
+              "RelativeDocumentMoniker": "Models\\WorkOrder.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\WorkOrder.cs",
+              "RelativeToolTip": "Models\\WorkOrder.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAUwCwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:57:19.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Dogiparthy_Spring25.csproj",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ConstructionMS.csproj",
+              "RelativeDocumentMoniker": "ConstructionMS.csproj",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\ConstructionMS.csproj",
+              "RelativeToolTip": "ConstructionMS.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-04T23:21:17.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\Create.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Create.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\Create.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAIBJwGMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:51:52.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectSites\\Delete.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Delete.cshtml",
+              "RelativeToolTip": "Views\\ProjectSites\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T05:37:56.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\Edit.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Edit.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\Edit.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAIBJwGQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T05:59:39.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "dbo.AspNetUsers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dogiparthy_Spring25/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dogiparthy_Spring25/True/SqlTable/dbo.AspNetUsers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-06T14:05:53.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DeleteSiteWorker.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\DeleteSiteWorker.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\DeleteSiteWorker.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\DeleteSiteWorker.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\DeleteSiteWorker.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwBgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T06:29:07.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DeleteWorkOrder.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\DeleteWorkOrder.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\DeleteWorkOrder.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\DeleteWorkOrder.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\DeleteWorkOrder.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T02:10:51.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\Delete.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Delete.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\Delete.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAIBJwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T02:10:44.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\Delete.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Delete.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T00:32:00.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ManageSiteWorkers.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\ManageSiteWorkers.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\ManageSiteWorkers.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\ManageSiteWorkers.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\ManageSiteWorkers.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T06:28:14.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CurrentOwners\\Index.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\CurrentOwners\\Index.cshtml",
+              "RelativeToolTip": "Views\\CurrentOwners\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAIBJwD8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T02:43:54.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\Index.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Index.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAWwDMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T00:32:33.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\Edit.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Edit.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\Edit.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAIBJwC0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T00:32:25.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\Details.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Details.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\Details.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAWwCkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T00:32:10.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\Create.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\Create.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\Create.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAIBJwDAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T00:31:44.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AssignSiteWorkers.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\AssignSiteWorkers.cshtml",
+              "RelativeDocumentMoniker": "Views\\WorkOrders\\AssignSiteWorkers.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\WorkOrders\\AssignSiteWorkers.cshtml",
+              "RelativeToolTip": "Views\\WorkOrders\\AssignSiteWorkers.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAIBJwBIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T06:26:46.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T15:09:14.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectSites\\Edit.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ProjectSites\\Edit.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAWwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:42:24.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\Index.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Index.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:49:02.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Search.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Search.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectSites\\Search.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Search.cshtml",
+              "RelativeToolTip": "Views\\ProjectSites\\Search.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAIBJwBEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T15:42:52.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectSites\\Details.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Details.cshtml",
+              "RelativeToolTip": "Views\\ProjectSites\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T23:42:44.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\Details.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\Details.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\Details.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAmwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T05:59:29.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ManageWorkOrders.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\ManageWorkOrders.cshtml",
+              "RelativeDocumentMoniker": "Views\\SiteWorkers\\ManageWorkOrders.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\SiteWorkers\\ManageWorkOrders.cshtml",
+              "RelativeToolTip": "Views\\SiteWorkers\\ManageWorkOrders.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T06:00:01.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ProjectSites\\Index.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\ProjectSites\\Index.cshtml",
+              "RelativeToolTip": "Views\\ProjectSites\\Index.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAIBJwCwAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T02:58:06.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\559 - Dotnet2\\Dogiparthy_Spring25\\Dogiparthy_Spring25\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-05T06:30:19.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "20250504232828_addedModels.cs",
+              "DocumentMoniker": "D:\\559\\EXAMMMMMMMMMMMMMMM\\Dogiparthy_Spring25\\Data\\Migrations\\20250504232828_addedModels.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\559\\EXAMMMMMMMMMMMMMMM\\Dogiparthy_Spring25\\Data\\Migrations\\20250504232828_addedModels.cs",
+              "ToolTip": "D:\\559\\EXAMMMMMMMMMMMMMMM\\Dogiparthy_Spring25\\Data\\Migrations\\20250504232828_addedModels.cs",
+              "RelativeToolTip": "..\\..\\..\\559\\EXAMMMMMMMMMMMMMMM\\Dogiparthy_Spring25\\Data\\Migrations\\20250504232828_addedModels.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T23:28:28.992Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
