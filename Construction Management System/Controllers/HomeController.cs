@@ -25,11 +25,13 @@ namespace Dogiparthy_Spring25.Controllers
         [AllowAnonymous]
         public IActionResult Index()
         {
-            // Check if user is a SiteWorker
-            var currentUser = GetCurrentUserPerson();
-            if (currentUser != null)
+            // Only show dashboards if user is authenticated
+            if (User.Identity.IsAuthenticated)
             {
-                var siteWorker = _context.SiteWorkers.FirstOrDefault(sw => sw.PersonID == currentUser.PersonID);
+                var userId = _userManager.GetUserId(User);
+
+                // Check if user is a SiteWorker
+                var siteWorker = _context.SiteWorkers.FirstOrDefault(sw => sw.IdentityUserId == userId);
                 if (siteWorker != null)
                 {
                     // Get all work orders assigned to this worker
@@ -60,45 +62,45 @@ namespace Dogiparthy_Spring25.Controllers
                     ViewBag.DashboardData = dashboardData;
                     ViewBag.IsSiteWorker = true;
                     ViewBag.TaskStatus = typeof(Models.TaskStatus);
+                    return View();
                 }
-                else
+
+                // Check if user is a CurrentOwner
+                var currentOwner = _context.CurrentOwners
+                    .FirstOrDefault(co => co.IdentityUserId == userId);
+
+                if (currentOwner != null)
                 {
-                    // Check if user is a CurrentOwner
-                    var currentOwner = _context.CurrentOwners
-                        .FirstOrDefault(co => co.PersonID == currentUser.PersonID);
+                    // Get all project sites owned by this owner
+                    var ownedProjectSites = _context.ProjectSites
+                        .Include(ps => ps.WorkOrders)
+                            .ThenInclude(wo => wo.WorkAllocations)
+                        .Where(ps => ps.CurrentOwnerPersonID == currentOwner.PersonID)
+                        .ToList();
 
-                    if (currentOwner != null)
+                    // Get all work orders from owned project sites
+                    var allWorkOrders = ownedProjectSites
+                        .SelectMany(ps => ps.WorkOrders)
+                        .ToList();
+
+                    // Create a view model for the CurrentOwner dashboard
+                    var ownerDashboardData = new
                     {
-                        // Get all project sites owned by this owner
-                        var ownedProjectSites = _context.ProjectSites
-                            .Include(ps => ps.WorkOrders)
-                                .ThenInclude(wo => wo.WorkAllocations)
-                            .Where(ps => ps.CurrentOwnerPersonID == currentOwner.PersonID)
-                            .ToList();
+                        OwnerName = currentOwner.FirstName + " " + currentOwner.LastName,
+                        OwnedProjectSites = ownedProjectSites,
+                        AllWorkOrders = allWorkOrders,
+                        TotalProjectSites = ownedProjectSites.Count,
+                        TotalWorkOrders = allWorkOrders.Count,
+                        CompletedWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.Completed),
+                        InProgressWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.InProgress),
+                        NotStartedWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.NotStarted),
+                        OnHoldWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.OnHold)
+                    };
 
-                        // Get all work orders from owned project sites
-                        var allWorkOrders = ownedProjectSites
-                            .SelectMany(ps => ps.WorkOrders)
-                            .ToList();
-
-                        // Create a view model for the CurrentOwner dashboard
-                        var ownerDashboardData = new
-                        {
-                            OwnerName = currentOwner.FirstName + " " + currentOwner.LastName,
-                            OwnedProjectSites = ownedProjectSites,
-                            AllWorkOrders = allWorkOrders,
-                            TotalProjectSites = ownedProjectSites.Count,
-                            TotalWorkOrders = allWorkOrders.Count,
-                            CompletedWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.Completed),
-                            InProgressWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.InProgress),
-                            NotStartedWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.NotStarted),
-                            OnHoldWorkOrders = allWorkOrders.Count(wo => wo.Status == Models.TaskStatus.OnHold)
-                        };
-
-                        ViewBag.OwnerDashboardData = ownerDashboardData;
-                        ViewBag.IsCurrentOwner = true;
-                        ViewBag.TaskStatus = typeof(Models.TaskStatus);
-                    }
+                    ViewBag.OwnerDashboardData = ownerDashboardData;
+                    ViewBag.IsCurrentOwner = true;
+                    ViewBag.TaskStatus = typeof(Models.TaskStatus);
+                    return View();
                 }
             }
 
