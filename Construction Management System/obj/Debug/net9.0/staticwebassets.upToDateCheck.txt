@@ -62,66 +62,66 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\css\login-modern.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\css\site.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\favicon.ico
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\js\site.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation\dist\additional-methods.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery-validation\LICENSE.md
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\dist\jquery.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\dist\jquery.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\dist\jquery.min.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\dist\jquery.slim.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\dist\jquery.slim.min.js
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\dist\jquery.slim.min.map
-D:\559 - Dotnet2\Dogiparthy_Spring25\Dogiparthy_Spring25\wwwroot\lib\jquery\LICENSE.txt
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\LICENSE.txt
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\dist\jquery.min.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\dist\jquery.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery\dist\jquery.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation\LICENSE.md
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\js\site.js
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\css\login-modern.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\css\site.css
+D:\559 - Dotnet2\Dogiparthy_Spring25\Construction Management System\wwwroot\favicon.ico
